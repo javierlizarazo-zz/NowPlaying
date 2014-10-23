@@ -1,0 +1,91 @@
+/* Global Large */
+body{
+	.arial;
+	#wrapper{
+		border-top: 4px solid @darkBlue;
+		margin:0 auto;
+		max-width: 1000px;
+		width: 100%;
+		.top{
+			display: block;
+			h1{
+				.font-size(2);
+				font-weight: bold;
+				margin: 10px 0;
+			}
+			.description{
+				.font-size(0.9);
+			}
+		}
+		.post{
+			display: block;
+			margin: 20px auto 0;
+			width: 80%;
+			input[type=text]{
+				border: 1px solid @lightBlue;
+				.font-size(1);
+				margin: 0 10px 0 5px;
+				padding: 5px;
+				width: 20%;
+			}
+			.tweetBtn{
+				background-color: @lightBlue;
+				color: @white;
+				padding:8px;
+				.rounded-corners;
+				text-decoration: none;
+				&:before{
+					content: "b";
+					font-family: "icons";
+				  	.font-size(1.25);
+				  	margin-right: 10px;
+				    position: relative;
+				    top: 6px;
+				}
+			}
+		}
+		.tweetContainer{
+			display: block;
+			margin: 30px auto;
+			width: 80%;
+			.tweet{
+				background-color: @lightBlue;
+				border: 1px solid @lightBlue;
+				.rounded-corners;
+				display: inline-block;
+				margin: 0 auto 20px;
+				padding: 10px;
+				width: 100%;
+				.info{
+					float: left;
+					.profilePic{
+						float: left;
+					}
+					.userInfo{
+						float: left;
+						.font-size(0.7);
+						margin-left: 10px;
+						span{
+							display: block;
+							margin-bottom: 5px;
+						}
+					}
+					.tweetText{
+						display: block;
+						clear: both;
+						.font-size(0.8);
+						padding-top: 10px;
+					}
+					.tweetWidget{
+						display: block;
+						.font-size(0.8);
+						margin: 10px 10px 10px 0;
+						a{
+							color: @darkBlue;
+						}
+					}
+				}
+			}
+		}
+	}
+}

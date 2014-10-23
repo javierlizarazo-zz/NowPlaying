@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>#NowPlaying</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+	<!-- METAS -->
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
+	<!-- CSS -->
+	<link href="css/Master.css" rel="stylesheet" />
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/codebird.js"></script>
+	<script type="text/javascript" src="js/jquery.loadTemplate-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+
+
+</head>
+<body>
+	<!-- #wrapper -->
+	<div id="wrapper">
+		<!-- .top -->
+		<section class="top">
+			<h1>#nowplaying in San Francisco</h1>
+			<p class="description">This page shows #nowplaying tweets in San Francisco that contain a youtube link. It also allows you to post a #nowplaying tweet with a YouTube link.</p>
+		</section><!-- END.top -->
+		<!-- .post -->
+		<section class="post">
+			<label for="videoUrl">Video URL:</label>
+			<input type="text" id="videoUrl">
+			<label for="Comment">Comment:</label>
+			<input type="text" id="Comment">
+			<a href="javascript:void(0)" class="tweetBtn icon">Tweet to #nowplaying</a>
+		</section><!-- END.post -->
+
+		<!-- .tweetContainer -->
+		<section class="tweetContainer">
+
+		</section><!-- END.tweetContainer -->
+	</div>
+	<!-- END#wrapper -->
+
+	<!-- template -->
+	<script type="text/html" id="tweetsTemplate">
+		<div class="tweet">
+			<h3 class="tweetTitle"></h3>
+			<div class="tweetInfo">
+				<div class="video"></div>
+				<div class="info">
+					<img data-src="pic" alt="" class="profilePic"/>
+					<div class="userInfo">
+						<span class="name" data-content="name"></span>
+						<span class="user" data-content="user"></span>
+					</div>
+					<p class="tweetText" data-content="text"></p>
+
+					<ul class="tweetWidget">
+						<li class="button" data-link="follow">Retweet</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</script>
+</body>
+</html>

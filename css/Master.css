@@ -1,0 +1,262 @@
+/* NowPlaying Less */
+/*
+	0. Reset
+	1. Fonts
+	3. Variables
+	4. Global
+*/
+/* 0. Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input {
+  outline: none;
+}
+/* 1. Fonts */
+@charset "UTF-8";
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 2. Variables */
+/* Break Points */
+/* Colors */
+/* Font size px, rem */
+/* fonts */
+/* Rounded Corners */
+/* 2. Global */
+/* Global Large */
+body {
+  color: #000000;
+  font-family: arial;
+}
+body #wrapper {
+  border-top: 4px solid #031d34;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+body #wrapper .top {
+  display: block;
+}
+body #wrapper .top h1 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+body #wrapper .top .description {
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+body #wrapper .post {
+  display: block;
+  margin: 20px auto 0;
+  width: 80%;
+}
+body #wrapper .post input[type=text] {
+  border: 1px solid #55acee;
+  font-size: 10px;
+  font-size: 1rem;
+  margin: 0 10px 0 5px;
+  padding: 5px;
+  width: 20%;
+}
+body #wrapper .post .tweetBtn {
+  background-color: #55acee;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 5px 5px 5px 5px;
+  text-decoration: none;
+}
+body #wrapper .post .tweetBtn:before {
+  content: "b";
+  font-family: "icons";
+  font-size: 12.5px;
+  font-size: 1.25rem;
+  margin-right: 10px;
+  position: relative;
+  top: 6px;
+}
+body #wrapper .tweetContainer {
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+}
+body #wrapper .tweetContainer .tweet {
+  background-color: #55acee;
+  border: 1px solid #55acee;
+  border-radius: 5px 5px 5px 5px;
+  display: inline-block;
+  margin: 0 auto 20px;
+  padding: 10px;
+  width: 100%;
+}
+body #wrapper .tweetContainer .tweet .info {
+  float: left;
+}
+body #wrapper .tweetContainer .tweet .info .profilePic {
+  float: left;
+}
+body #wrapper .tweetContainer .tweet .info .userInfo {
+  float: left;
+  font-size: 7px;
+  font-size: 0.7rem;
+  margin-left: 10px;
+}
+body #wrapper .tweetContainer .tweet .info .userInfo span {
+  display: block;
+  margin-bottom: 5px;
+}
+body #wrapper .tweetContainer .tweet .info .tweetText {
+  display: block;
+  clear: both;
+  font-size: 8px;
+  font-size: 0.8rem;
+  padding-top: 10px;
+}
+body #wrapper .tweetContainer .tweet .info .tweetWidget {
+  display: block;
+  font-size: 8px;
+  font-size: 0.8rem;
+  margin: 10px 10px 10px 0;
+}
+body #wrapper .tweetContainer .tweet .info .tweetWidget a {
+  color: #031d34;
+}
+/* Global Medium */
+@media only screen and (max-width: 768px) {
+  
+}
+/* Global Small */
+@media only screen and (max-width: 640px) {
+  
+}

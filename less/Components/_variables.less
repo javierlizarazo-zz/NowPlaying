@@ -1,0 +1,29 @@
+/* Break Points */
+@breakPointMedium: 768px;
+@breakPointSmall: 640px;
+
+/* Colors */
+@black: #000000;
+@white: #ffffff;
+@lightBlue: #55acee;
+@darkBlue: #031d34;
+@grey: #626262;
+
+/* Font size px, rem */
+.font-size(@sizeValue) {
+	@remValue: @sizeValue;
+	@pxValue: (@sizeValue * 10);
+	font-size: ~"@{pxValue}px"; 
+	font-size: ~"@{remValue}rem";
+}
+
+/* fonts */
+.arial(@color: @black){
+	color: @color;
+	font-family: arial;
+}
+
+/* Rounded Corners */
+.rounded-corners(@lt: 5px, @rt: 5px, @rb: 5px, @lb: 5px){
+	border-radius: @lt @rt @rb @lb;
+}
