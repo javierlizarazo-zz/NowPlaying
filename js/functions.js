@@ -50,7 +50,7 @@ function getTweets() {
     geoCode = [latitude, longitude, '1mi'];
     var params = {
         q: "NowPlaying",
-        count: '1000',
+        count: '2000',
         result_type: 'recent'
         //,geocode: geoCode.join()
     };
