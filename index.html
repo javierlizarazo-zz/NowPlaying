@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/codebird.js"></script>
 	<script type="text/javascript" src="js/jquery.loadTemplate-1.4.5.min.js"></script>
+	<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
 
 
@@ -35,6 +36,7 @@
 			<a href="javascript:void(0)" class="tweetBtn icon">Tweet to #nowplaying</a>
 		</section><!-- END.post -->
 
+		<div class="loader"><img src="images/loader.gif" alt="loading" /></div>
 		<!-- .tweetContainer -->
 		<section class="tweetContainer">
 
@@ -47,17 +49,20 @@
 		<div class="tweet">
 			<h3 class="tweetTitle"></h3>
 			<div class="tweetInfo">
-				<div class="video"></div>
+				<div class="video" data-alt="video" data-id="playerId"></div>
 				<div class="info">
 					<img data-src="pic" alt="" class="profilePic"/>
 					<div class="userInfo">
 						<span class="name" data-content="name"></span>
 						<span class="user" data-content="user"></span>
 					</div>
+					<div class="follow-button" data-link="follow">Follow</div>
 					<p class="tweetText" data-content="text"></p>
 
 					<ul class="tweetWidget">
-						<li class="button" data-link="follow">Retweet</li>
+						<li class="button retweet" data-link="retweet">Retweet</li>
+						<li class="button reply" data-link="reply">Reply</li>
+						<li class="button favorite" data-link="favorite">Favorite</li>
 					</ul>
 				</div>
 			</div>

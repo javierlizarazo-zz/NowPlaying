@@ -206,6 +206,11 @@ body #wrapper .post .tweetBtn:before {
   position: relative;
   top: 6px;
 }
+body #wrapper .loader {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
 body #wrapper .tweetContainer {
   display: block;
   margin: 30px auto;
@@ -217,40 +222,93 @@ body #wrapper .tweetContainer .tweet {
   border-radius: 5px 5px 5px 5px;
   display: inline-block;
   margin: 0 auto 20px;
-  padding: 10px;
+  padding: 10px 10px 25px;
   width: 100%;
 }
-body #wrapper .tweetContainer .tweet .info {
+body #wrapper .tweetContainer .tweet .tweetInfo {
+  position: relative;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .video {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info {
   float: left;
 }
-body #wrapper .tweetContainer .tweet .info .profilePic {
+body #wrapper .tweetContainer .tweet .tweetInfo .info .profilePic {
   float: left;
 }
-body #wrapper .tweetContainer .tweet .info .userInfo {
+body #wrapper .tweetContainer .tweet .tweetInfo .info .userInfo {
   float: left;
   font-size: 7px;
   font-size: 0.7rem;
   margin-left: 10px;
 }
-body #wrapper .tweetContainer .tweet .info .userInfo span {
+body #wrapper .tweetContainer .tweet .tweetInfo .info .userInfo span {
   display: block;
   margin-bottom: 5px;
 }
-body #wrapper .tweetContainer .tweet .info .tweetText {
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetText {
   display: block;
   clear: both;
   font-size: 8px;
   font-size: 0.8rem;
   padding-top: 10px;
 }
-body #wrapper .tweetContainer .tweet .info .tweetWidget {
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget {
   display: block;
   font-size: 8px;
   font-size: 0.8rem;
-  margin: 10px 10px 10px 0;
+  margin: 20px 10px 10px 0;
 }
-body #wrapper .tweetContainer .tweet .info .tweetWidget a {
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget li.retweet a:after {
+  content: 'a';
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget li.favorite a:after {
+  content: 'd';
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget li.reply a:after {
+  content: 'c';
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget a {
+  color: #108dec;
+  text-decoration: none;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget a:hover {
   color: #031d34;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .tweetWidget a:after {
+  font-family: "icons";
+  font-size: 1rem;
+  margin-right: 10px;
+  position: relative;
+  right: -6px;
+  top: 3px;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .follow-button {
+  font-size: 8px;
+  font-size: 0.8rem;
+  margin: 0 10px;
+  position: absolute;
+  right: 0px;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .follow-button a {
+  color: #031d34;
+  text-decoration: none;
+}
+body #wrapper .tweetContainer .tweet .tweetInfo .info .follow-button a:before {
+  content: "b";
+  font-family: "icons";
+  font-size: 12.5px;
+  font-size: 1.25rem;
+  margin-right: 3px;
+  position: relative;
+  top: 6px;
 }
 /* Global Medium */
 @media only screen and (max-width: 768px) {

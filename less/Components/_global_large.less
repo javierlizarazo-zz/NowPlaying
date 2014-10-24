@@ -44,6 +44,11 @@ body{
 				}
 			}
 		}
+		.loader{
+			margin-top: 30px;
+			text-align: center;
+			width: 100%;
+		}
 		.tweetContainer{
 			display: block;
 			margin: 30px auto;
@@ -54,34 +59,91 @@ body{
 				.rounded-corners;
 				display: inline-block;
 				margin: 0 auto 20px;
-				padding: 10px;
+				padding: 10px 10px 25px;
 				width: 100%;
-				.info{
-					float: left;
-					.profilePic{
-						float: left;
+				.tweetInfo{
+					position: relative;
+					.video{
+						display: block;
+						margin: 0 auto 20px;
+						width: 100%;
 					}
-					.userInfo{
+					.info{
 						float: left;
-						.font-size(0.7);
-						margin-left: 10px;
-						span{
-							display: block;
-							margin-bottom: 5px;
+						.profilePic{
+							float: left;
 						}
-					}
-					.tweetText{
-						display: block;
-						clear: both;
-						.font-size(0.8);
-						padding-top: 10px;
-					}
-					.tweetWidget{
-						display: block;
-						.font-size(0.8);
-						margin: 10px 10px 10px 0;
-						a{
-							color: @darkBlue;
+						.userInfo{
+							float: left;
+							.font-size(0.7);
+							margin-left: 10px;
+							span{
+								display: block;
+								margin-bottom: 5px;
+							}
+						}
+						.tweetText{
+							display: block;
+							clear: both;
+							.font-size(0.8);
+							padding-top: 10px;
+						}
+						.tweetWidget{
+							display: block;
+							.font-size(0.8);
+							margin: 20px 10px 10px 0;
+							li{
+								float: left;
+								margin: 0 10px 0 0;
+								&.retweet{
+									a:after{
+										content:'a';
+									}
+								}
+								&.favorite{
+									a:after{
+										content:'d';
+									}
+								}
+								&.reply{
+									a:after{
+										content:'c';
+									}
+								}
+							}
+							a{
+								color: @blue;
+								text-decoration: none;
+								&:hover{
+									color:@darkBlue;
+								}
+								&:after{
+									font-family: "icons";
+								    font-size: 1rem;
+								    margin-right: 10px;
+								    position: relative;
+								    right: -6px;
+								    top: 3px;
+								}
+							}
+						}
+						.follow-button{
+							.font-size(0.8);
+							margin: 0 10px;
+							position: absolute;
+							right: 0px;
+							a{
+								color: @darkBlue;
+								text-decoration: none;
+								&:before{
+									content: "b";
+									font-family: "icons";
+								  	.font-size(1.25);
+								  	margin-right: 3px;
+								    position: relative;
+								    top: 6px;
+								}
+							}
 						}
 					}
 				}
