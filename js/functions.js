@@ -18,15 +18,15 @@ function getLocation() {
 var latitude, longitude, geoCode;
 
 function showPosition(position) {
-    console.log(position);
+    //console.log(position);
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
     validateApi();
 }
 
-// setInterval(function(){
-//     getTweets();
-// }, 10000);
+setInterval(function(){
+    getTweets();
+}, 60000);
 
 var cb = new Codebird;
 
@@ -47,12 +47,12 @@ function validateApi(){
 function getTweets() {
     $('.loader').show();
     
-    geoCode = [latitude, longitude, '1mi'];
+    geoCode = [latitude, longitude, '100mi'];
     var params = {
         q: "NowPlaying",
         count: '2000',
         result_type: 'recent'
-        //,geocode: geoCode.join()
+        ,geocode: geoCode.join()
     };
 
     var nplayer = 0;
@@ -61,7 +61,7 @@ function getTweets() {
         "search_tweets",
         params,
         function (reply) {
-            console.log(reply);
+            //console.log(reply);
 
             var eachTweet = reply.statuses;
             var elemeObj = [];
@@ -80,7 +80,7 @@ function getTweets() {
 
                 $.each(eachTweet[i].entities.urls, function(index, element){
                     if(element.expanded_url.indexOf('youtu') != -1 && nplayer < 5){
-                        console.log(element.expanded_url);
+                        //console.log(element.expanded_url);
                         var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
                         var match = element.expanded_url.match(regExp);
                         if (match && match[7].length == 11){
